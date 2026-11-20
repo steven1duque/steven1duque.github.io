@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>¡Feliz Cumpleaños Mi Nicole Hermosa! 🕷️🦇❣️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Patrick+Hand&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+         :root {
+            /* Paleta azul suave con detalles de Spider-Man & Batman */
+            --pink-bg: #edf6ff;
+            --pink-grid: #cfe5ff;
+            --card-bg: #fbfdff;
+            --pink-main: #4dabf7;
+            --pink-dark: #1864ab;
+            --pink-light: #e7f5ff;
+            --pink-border: #a5d8ff;
+            --lavender: #748ffc;
+            --lavender-light: #edf2ff;
+            --gold-accent: #fcc419;
+            --spidey-coral: #e03131;
+            --bat-plum: #212529;
+            --text-main: #243b53;
+            --text-muted: #526b85;
+            --shadow-soft: 0 12px 28px rgba(24, 100, 171, 0.18);
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            user-select: none;
+        }
+        
+        body {
+            font-family: 'Quicksand', sans-serif;
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            background-color: var(--pink-bg);
+            background-image: radial-gradient(circle at 18% 18%, rgba(77, 171, 247, 0.16), transparent 45%), radial-gradient(circle at 82% 82%, rgba(116, 143, 252, 0.18), transparent 45%), linear-gradient(var(--pink-grid) 2px, transparent 2px), linear-gradient(90deg, var(--pink-grid) 2px, transparent 2px);
+            background-size: 100% 100%, 100% 100%, 28px 28px, 28px 28px;
+            overflow-x: hidden;
+        }
+        /* Elementos flotantes de fondo */
+        
+        .floating-hearts {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 0;
+        }
+        
+        .heart-bg {
+            position: absolute;
+            bottom: -40px;
+            font-size: 20px;
+            opacity: 0.5;
+            animation: floatUp linear infinite;
+        }
+        
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+            15% {
+                opacity: 0.55;
+            }
+            85% {
+                opacity: 0.55;
+            }
+            100% {
+                transform: translateY(-110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        /* Contenedor Principal */
+        
+        .app-container {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 440px;
+            background: var(--card-bg);
+            border: 4px solid var(--pink-border);
+            border-radius: 32px;
+            box-shadow: var(--shadow-soft), 0 0 0 7px rgba(255, 255, 255, 0.8), 0 0 0 10px rgba(207, 229, 255, 0.7);
+            padding: 24px 20px 28px;
+            text-align: center;
+            transition: all 0.35s ease;
+        }
+        
+        .screen {
+            display: none;
+            animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .screen.active {
+            display: block;
+        }
+        
+        @keyframes popIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.92) translateY(10px);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+        
+        h1,
+        h2 {
+            font-family: 'Fredoka', cursive;
+            color: var(--pink-dark);
+            letter-spacing: 0.5px;
+        }
+        
+        .badge-top {
+            display: inline-block;
+            background: linear-gradient(90deg, var(--pink-light), var(--lavender-light));
+            color: var(--pink-dark);
+            font-weight: 700;
+            font-size: 0.8rem;
+            padding: 5px 15px;
+            border-radius: 999px;
+            border: 2px dashed var(--pink-main);
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+        }
+        /* Botones generales */
+        
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: linear-gradient(135deg, var(--pink-main), var(--lavender));
+            color: #fff;
+            border: 2px solid #fff;
+            border-radius: 999px;
+            padding: 9px 20px;
+            font-family: 'Fredoka', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 18px;
+            box-shadow: 0 5px 14px rgba(24, 100, 171, 0.25);
+            transition: transform 0.15s ease, filter 0.2s;
+        }
+        
+        .btn-back:hover {
+            filter: brightness(1.06);
+            transform: translateY(-2px);
+        }
+        /* ================= 1. PANTALLA DE BLOQUEO ================= */
+        
+        .hero-duo-svg {
+            width: 215px;
+            height: 118px;
+            margin: 0 auto 4px;
+            filter: drop-shadow(0 6px 10px rgba(24, 100, 171, 0.18));
+        }
+        
+        .lock-title {
+            font-size: 1.55rem;
+            margin-bottom: 4px;
+        }
+        
+        .lock-subtitle {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            margin-bottom: 14px;
+        }
+        
+        .pin-display {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 18px;
+        }
+        
+        .pin-dot {
+            width: 44px;
+            height: 48px;
+            background: var(--pink-light);
+            border: 3px solid var(--pink-border);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.45rem;
+            font-weight: 700;
+            color: var(--pink-dark);
+            box-shadow: inset 0 2px 5px rgba(77, 171, 247, 0.15);
+            transition: all 0.2s;
+        }
+        
+        .pin-dot.filled {
+            border-color: var(--pink-main);
+            background: #fff;
+            transform: scale(1.06);
+        }
+        
+        .keypad {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            max-width: 270px;
+            margin: 0 auto;
+        }
+        
+        .key-btn {
+            background: #fff;
+            border: 2.5px solid var(--pink-border);
+            border-radius: 18px;
+            height: 54px;
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--pink-dark);
+            cursor: pointer;
+            box-shadow: 0 4px 0 var(--pink-border);
+            transition: all 0.1s ease;
+        }
+        
+        .key-btn:hover {
+            background: var(--pink-light);
+        }
+        
+        .key-btn:active {
+            transform: translateY(3px);
+            box-shadow: 0 1px 0 var(--pink-border);
+        }
+        
+        .key-btn.action-del {
+            background: var(--lavender-light);
+            border-color: var(--lavender);
+            box-shadow: 0 4px 0 var(--lavender);
+            color: #6741d9;
+            font-size: 1.1rem;
+        }
+        
+        .key-btn.action-ok {
+            background: linear-gradient(135deg, var(--pink-main), var(--spidey-coral));
+            color: #fff;
+            border-color: var(--pink-dark);
+            box-shadow: 0 4px 0 var(--pink-dark);
+            font-size: 1.1rem;
+        }
+        
+        .shake {
+            animation: shakeAnim 0.4s ease;
+        }
+        
+        @keyframes shakeAnim {
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+            20%,
+            60% {
+                transform: translateX(-8px);
+            }
+            40%,
+            80% {
+                transform: translateX(8px);
+            }
+        }
+        /* Modal de Error */
+        
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(36, 59, 83, 0.45);
+            backdrop-filter: blur(3px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 50;
+            padding: 20px;
+        }
+        
+        .modal-overlay.show {
+            display: flex;
+        }
+        
+        .modal-card {
+            background: #fff;
+            border: 4px solid var(--pink-main);
+            border-radius: 26px;
+            padding: 24px 20px;
+            max-width: 310px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(24, 100, 171, 0.25);
+            animation: popIn 0.3s ease;
+        }
+        
+        .modal-card h3 {
+            font-family: 'Fredoka', sans-serif;
+            color: var(--pink-dark);
+            font-size: 1.35rem;
+            margin: 8px 0 6px;
+        }
+        
+        .modal-card p {
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+            color: var(--text-muted);
+        }
+        
+        .modal-btn {
+            background: linear-gradient(135deg, var(--pink-main), var(--lavender));
+            color: #fff;
+            border: none;
+            border-radius: 999px;
+            padding: 10px 24px;
+            font-family: 'Fredoka', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        /* ================= 2. MENÚ DE REGALOS ================= */
+        
+        .gifts-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+            margin-top: 16px;
+        }
+        
+        .gift-card {
+            background: linear-gradient(145deg, #ffffff, var(--pink-light));
+            border: 3px solid var(--pink-border);
+            border-radius: 22px;
+            padding: 18px 12px;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.25s ease;
+            box-shadow: 0 6px 0 var(--pink-border);
+        }
+        
+        .gift-card:nth-child(even) {
+            background: linear-gradient(145deg, #ffffff, var(--lavender-light));
+            border-color: #bac8ff;
+            box-shadow: 0 6px 0 #bac8ff;
+        }
+        
+        .gift-card:hover {
+            transform: translateY(-4px) rotate(-1deg);
+            border-color: var(--pink-main);
+            box-shadow: 0 10px 0 var(--pink-main);
+        }
+        
+        .gift-card.opened {
+            opacity: 0.94;
+        }
+        
+        .gift-card.opened::after {
+            content: "✓ Visto";
+            position: absolute;
+            top: 8px;
+            right: 10px;
+            background: var(--pink-main);
+            color: #fff;
+            font-size: 0.68rem;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 999px;
+        }
+        
+        .gift-icon {
+            width: 88px;
+            height: 88px;
+            display: block;
+            object-fit: cover;
+            border-radius: 18px;
+            border: 3px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 5px 14px rgba(36, 91, 138, 0.18);
+            margin-bottom: 6px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: bounceSlow 2.2s infinite ease-in-out;
+        }
+        
+        @keyframes bounceSlow {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+        
+        .gift-label {
+            font-family: 'Fredoka', sans-serif;
+            font-size: 1.05rem;
+            color: var(--pink-dark);
+        }
+        
+        .gift-hint {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+        /* ================= 3. COLLAGE DE RECUERDOS ================= */
+        
+        .polaroid-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+            margin-top: 14px;
+        }
+        
+        .polaroid {
+            background: #fff;
+            padding: 8px 8px 14px;
+            border-radius: 14px;
+            border: 2.5px solid var(--pink-border);
+            box-shadow: 0 6px 14px rgba(24, 100, 171, 0.12);
+            transition: transform 0.25s ease;
+        }
+        
+        .polaroid:nth-child(even) {
+            border-color: #bac8ff;
+        }
+        
+        .polaroid:nth-child(odd) {
+            transform: rotate(-2.5deg);
+        }
+        
+        .polaroid:nth-child(even) {
+            transform: rotate(2.5deg);
+        }
+        
+        .polaroid:hover {
+            transform: scale(1.05) rotate(0deg);
+            z-index: 2;
+        }
+        
+        .polaroid-img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #cfe5ff, #dbe4ff 55%, #fff3bf);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .polaroid-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .polaroid-placeholder {
+            font-size: 2rem;
+        }
+        
+        .polaroid-placeholder span {
+            display: block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-top: 4px;
+            padding: 0 4px;
+        }
+        
+        .polaroid-caption {
+            font-family: 'Patrick Hand', cursive;
+            font-size: 1.05rem;
+            color: var(--text-main);
+            margin-top: 8px;
+            line-height: 1.15;
+        }
+        /* ================= 4. RAMO DE FLORES ================= */
+        
+        .bouquet-stage {
+            position: relative;
+            margin: 14px auto 6px;
+            padding: 12px 8px;
+            min-height: 290px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .bouquet-svg {
+            width: 210px;
+            height: 230px;
+            filter: drop-shadow(0 8px 14px rgba(24, 100, 171, 0.2));
+            animation: sway 3.5s ease-in-out infinite;
+        }
+        
+        @keyframes sway {
+            0%,
+            100% {
+                transform: rotate(-2deg);
+            }
+            50% {
+                transform: rotate(2deg);
+            }
+        }
+        
+        .flower-notes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 8px;
+        }
+        
+        .note-tag {
+            background: #fff;
+            border: 2px solid var(--pink-main);
+            color: var(--pink-dark);
+            font-family: 'Patrick Hand', cursive;
+            font-size: 1.05rem;
+            padding: 5px 12px;
+            border-radius: 14px;
+            box-shadow: 0 4px 10px rgba(77, 171, 247, 0.18);
+            cursor: pointer;
+            transition: transform 0.2s, background 0.2s;
+        }
+        
+        .note-tag:nth-child(even) {
+            border-color: var(--lavender);
+            color: #5f3dc4;
+        }
+        
+        .note-tag:hover {
+            transform: scale(1.08) rotate(-2deg);
+            background: var(--pink-light);
+        }
+        /* ================= 5. CARTA INTERACTIVA ================= */
+        
+        .envelope-wrapper {
+            margin: 18px auto 10px;
+            cursor: pointer;
+        }
+        
+        .envelope-box {
+            position: relative;
+            width: 260px;
+            height: 170px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #74c0fc, #748ffc);
+            border-radius: 16px;
+            box-shadow: 0 10px 22px rgba(214, 51, 108, 0.24);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 3px solid var(--pink-dark);
+        }
+        
+        .envelope-flap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-left: 127px solid transparent;
+            border-right: 127px solid transparent;
+            border-top: 95px solid #4dabf7;
+            transform-origin: top;
+            transition: transform 0.5s ease;
+            z-index: 3;
+        }
+        
+        .envelope-box.open .envelope-flap {
+            transform: rotateX(180deg);
+            z-index: 1;
+        }
+        
+        .envelope-seal {
+            position: relative;
+            z-index: 4;
+            background: #fff3bf;
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.45rem;
+            border: 3px solid var(--pink-dark);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            transition: opacity 0.3s;
+        }
+        
+        .envelope-box.open .envelope-seal {
+            opacity: 0;
+        }
+        
+        .letter-paper {
+            display: none;
+            background: #fffdf9;
+            border: 2.5px dashed var(--pink-main);
+            border-radius: 18px;
+            padding: 20px 18px;
+            margin-top: 14px;
+            text-align: left;
+            max-height: 290px;
+            overflow-y: auto;
+            box-shadow: inset 0 0 15px rgba(165, 216, 255, 0.25);
+            animation: popIn 0.45s ease;
+        }
+        
+        .letter-paper.visible {
+            display: block;
+        }
+        
+        .letter-paper h3 {
+            font-family: 'Fredoka', sans-serif;
+            color: var(--pink-dark);
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 1.25rem;
+        }
+        
+        .letter-paper p {
+            font-family: 'Patrick Hand', cursive;
+            font-size: 1.18rem;
+            line-height: 1.45;
+            color: var(--text-main);
+            margin-bottom: 10px;
+        }
+        
+        .letter-sign {
+            text-align: right;
+            font-weight: 700;
+            color: var(--pink-dark);
+            margin-top: 8px;
+        }
+        /* ================= 6. PASTEL INTERACTIVO ================= */
+        
+        .cake-area {
+            margin: 16px auto 8px;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .cake-svg {
+            width: 230px;
+            height: 220px;
+            margin: 0 auto;
+            display: block;
+        }
+        
+        .flame {
+            transform-origin: center bottom;
+            animation: flicker 0.6s infinite alternate ease-in-out;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        
+        .flame.out {
+            opacity: 0;
+            transform: scale(0);
+            animation: none;
+        }
+        
+        @keyframes flicker {
+            0% {
+                transform: scale(1) rotate(-3deg);
+            }
+            100% {
+                transform: scale(1.12) rotate(3deg);
+            }
+        }
+        
+        .wish-banner {
+            display: none;
+            background: linear-gradient(135deg, #e7f5ff, #edf2ff);
+            border: 2.5px solid var(--pink-main);
+            border-radius: 18px;
+            padding: 12px 14px;
+            margin-top: 10px;
+            animation: popIn 0.5s ease;
+        }
+        
+        .wish-banner.show {
+            display: block;
+        }
+        
+        .wish-banner h3 {
+            font-family: 'Fredoka', sans-serif;
+            color: var(--pink-dark);
+            font-size: 1.2rem;
+            margin-bottom: 4px;
+        }
+        
+        .btn-relight {
+            background: var(--lavender);
+            color: #fff;
+            border: none;
+            border-radius: 999px;
+            padding: 6px 14px;
+            font-family: 'Fredoka', sans-serif;
+            font-size: 0.85rem;
+            margin-top: 8px;
+            cursor: pointer;
+        }
+        /* Confeti */
+        
+        .confetti-piece {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            top: -15px;
+            z-index: 99;
+            pointer-events: none;
+            animation: confettiFall 3s linear forwards;
+        }
+        
+        @keyframes confettiFall {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(105vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Elementos flotando en el fondo -->
+    <div class="floating-hearts" id="floatingHearts"></div>
+
+    <div class="app-container">
+
+        <!-- ==================== PANTALLA 1: BLOQUEO / PIN ==================== -->
+        <section class="screen active" id="screen-lock">
+            <div class="badge-top">🕷️❣️ PRIMERO LA CONTRASEÑA MI AMOR ❣️🦇</div>
+
+            <!-- Dúo Chibi Spider-Man + Batman adaptado a estética dulce/cumpleaños -->
+            <svg class="hero-duo-svg" viewBox="0 0 260 140" xmlns="http://www.w3.org/2000/svg">
+        <!-- Telaraña azul decorativa izquierda -->
+        <path d="M12 18 Q45 36 58 76 M12 46 Q40 52 54 80 M26 12 Q48 42 52 76" stroke="#1f3a5f" stroke-width="1.8" fill="none" opacity="0.65"/>
+        <!-- Estrellita dorada derecha -->
+        <polygon points="234,12 238,23 250,23 240,30 244,41 234,34 224,41 228,30 218,23 230,23" fill="#fcc419"/>
+
+        <!-- ===== SPIDER-MAN CHIBI (Izquierda) ===== -->
+        <g transform="translate(20, 14)">
+          <!-- Máscara roja y telaraña azul oscuro -->
+          <ellipse cx="55" cy="58" rx="38" ry="42" fill="#e62429" stroke="#1f3a5f" stroke-width="3.2"/>
+          <!-- Líneas suaves de telaraña -->
+          <line x1="55" y1="16" x2="55" y2="100" stroke="#1f3a5f" stroke-width="1.3" opacity="0.55"/>
+          <line x1="17" y1="58" x2="93" y2="58" stroke="#1f3a5f" stroke-width="1.3" opacity="0.55"/>
+          <line x1="27" y1="28" x2="83" y2="88" stroke="#1f3a5f" stroke-width="1.3" opacity="0.55"/>
+          <line x1="83" y1="28" x2="27" y2="88" stroke="#1f3a5f" stroke-width="1.3" opacity="0.55"/>
+          <circle cx="55" cy="58" r="25" fill="none" stroke="#1f3a5f" stroke-width="1.2" opacity="0.45"/>
+          <!-- Ojos blancos grandes -->
+          <path d="M26 52 Q36 38 50 54 Q38 66 26 52 Z" fill="#ffffff" stroke="#1f3a5f" stroke-width="3.2" stroke-linejoin="round"/>
+          <path d="M84 52 Q74 38 60 54 Q72 66 84 52 Z" fill="#ffffff" stroke="#1f3a5f" stroke-width="3.2" stroke-linejoin="round"/>
+          <!-- Mejillitas tiernas -->
+          <ellipse cx="32" cy="69" rx="5.5" ry="3.5" fill="#ff8fab" opacity="0.85"/>
+          <ellipse cx="78" cy="69" rx="5.5" ry="3.5" fill="#ff8fab" opacity="0.85"/>
+        </g>
+
+        <!-- ===== BATMAN CHIBI (Derecha) ===== -->
+        <g transform="translate(130, 10)">
+          <!-- Orejas puntiagudas -->
+          <polygon points="24,44 20,7 42,32" fill="#212529" stroke="#111111" stroke-width="3.2" stroke-linejoin="round"/>
+          <polygon points="86,44 90,7 68,32" fill="#212529" stroke="#111111" stroke-width="3.2" stroke-linejoin="round"/>
+          <!-- Capucha negra -->
+          <ellipse cx="55" cy="62" rx="38" ry="42" fill="#212529" stroke="#111111" stroke-width="3.2"/>
+          <!-- Carita -->
+          <path d="M25 68 Q55 62 85 68 Q83 98 55 102 Q27 98 25 68 Z" fill="#ffe8d6" stroke="#111111" stroke-width="2.2"/>
+          <!-- Ojos blancos -->
+          <polygon points="28,54 48,60 32,64" fill="#ffffff"/>
+          <polygon points="82,54 62,60 78,64" fill="#ffffff"/>
+          <!-- Mejillitas sonrojadas -->
+          <ellipse cx="34" cy="78" rx="5.5" ry="3.5" fill="#ff8fab" opacity="0.85"/>
+          <ellipse cx="76" cy="78" rx="5.5" ry="3.5" fill="#ff8fab" opacity="0.85"/>
+          <!-- Sonrisita tierna -->
+          <path d="M48 83 Q55 88 62 83" stroke="#212529" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+        </g>
+
+        <!-- Corazón azul/dorado uniendo a ambos -->
+        <path d="M130 100 C121 89, 108 97, 130 116 C152 97, 139 89, 130 100 Z" fill="#4dabf7" stroke="#ffffff" stroke-width="2.5"/>
+      </svg>
+
+            <h1 class="lock-title">Ingresa el Código</h1>
+            <p class="lock-subtitle">Pista: El Dia que por fin pude tomar tu mano</p>
+
+            <div class="pin-display" id="pinDisplay">
+                <div class="pin-dot" id="dot-0"></div>
+                <div class="pin-dot" id="dot-1"></div>
+                <div class="pin-dot" id="dot-2"></div>
+                <div class="pin-dot" id="dot-3"></div>
+            </div>
+
+            <div class="keypad">
+                <button class="key-btn" onclick="pressKey('1')">1</button>
+                <button class="key-btn" onclick="pressKey('2')">2</button>
+                <button class="key-btn" onclick="pressKey('3')">3</button>
+                <button class="key-btn" onclick="pressKey('4')">4</button>
+                <button class="key-btn" onclick="pressKey('5')">5</button>
+                <button class="key-btn" onclick="pressKey('6')">6</button>
+                <button class="key-btn" onclick="pressKey('7')">7</button>
+                <button class="key-btn" onclick="pressKey('8')">8</button>
+                <button class="key-btn" onclick="pressKey('9')">9</button>
+                <button class="key-btn action-del" onclick="clearPin()">⌫</button>
+                <button class="key-btn" onclick="pressKey('0')">0</button>
+                <button class="key-btn action-ok" onclick="checkPin()">OK</button>
+            </div>
+        </section>
+
+        <!-- ==================== PANTALLA 2: MENÚ DE REGALOS ==================== -->
+        <section class="screen" id="screen-menu">
+            <div class="badge-top">🎉❣️ ¡FELIZ CUMPLEAÑOS PARA MI BEBE TIQUITITAAA! ❣️🎉</div>
+            <h1>¡QUIEN PUMPE AÑOS HOYYYY?!</h1>
+            <p class="lock-subtitle">Toca cada regalito para descubrir lo que traen mi amoor mujejeje</p>
+
+            <div class="gifts-grid">
+                <div class="gift-card" id="card-memories" onclick="openGift('screen-memories', 'card-memories')">
+                    <img class="gift-icon" src="fotitos/recuerdos.png" alt="Recuerdos">
+                    <div class="gift-label">Recuerdos</div>
+                    <div class="gift-hint">Nuestros momentos</div>
+                </div>
+
+                <div class="gift-card" id="card-flowers" onclick="openGift('screen-flowers', 'card-flowers')">
+                    <img class="gift-icon" src="fotitos/flores.jpg" alt="Flores">
+                    <div class="gift-label">Flores</div>
+                    <div class="gift-hint">Un detalle para ti mi niña</div>
+                </div>
+
+                <div class="gift-card" id="card-letter" onclick="openGift('screen-letter', 'card-letter')">
+                    <img class="gift-icon" src="fotitos/totoro.jpg" alt="Carta">
+                    <div class="gift-label">Carta</div>
+                    <div class="gift-hint">Tiene un mensaje para ti mi amor</div>
+                </div>
+
+                <div class="gift-card" id="card-cake" onclick="openGift('screen-cake', 'card-cake')">
+                    <img class="gift-icon" src="fotitos/gojopastel.jpg" alt="Pastel">
+                    <div class="gift-label">Pastel</div>
+                    <div class="gift-hint">Pide un deseo mi vida</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== PANTALLA 3: RECUERDOS ==================== -->
+        <section class="screen" id="screen-memories">
+            <div class="badge-top">✨ NUESTROS MOMENTOS ✨</div>
+            <h2>Todos nuestros Recuerdos son Especiales</h2>
+            <p class="lock-subtitle">Cada momento a tu lado y cada experiencia que podamos compartir es lo mas preciso para mi ❣️</p>
+
+            <div class="polaroid-grid">
+                <div class="polaroid">
+                    <div class="polaroid-img">
+                        <!-- <img src="foto1.jpg" alt="Recuerdo 1"> -->
+                        <img src="fotitos/1000522169.jpg" alt="Recuerdo 1">
+                    </div>
+                    <div class="polaroid-caption">Amo tanto nuestras caminatas de la manito mi amor</div>
+                </div>
+
+                <div class="polaroid">
+                    <div class="polaroid-img">
+                        <!-- <img src="foto2.jpg" alt="Recuerdo 2"> -->
+                        <img src="fotitos/1000524636.jpg" alt="Recuerdo 2">
+                    </div>
+                    <div class="polaroid-caption">No sabes lo feliz que me hace crear nuevas cosas contigo ❣️</div>
+                </div>
+
+                <div class="polaroid">
+                    <div class="polaroid-img">
+                        <!-- <img src="foto3.jpg" alt="Recuerdo 3"> -->
+                        <img src="fotitos/IMG_20261119_200316.jpg" alt="Recuerdo 3">
+                    </div>
+                    <div class="polaroid-caption">Somos El mejor dúo del universo mi amoor 💕</div>
+                </div>
+
+                <div class="polaroid">
+                    <div class="polaroid-img">
+                        <!-- <img src="foto4.jpg" alt="Recuerdo 4"> -->
+                        <img src="fotitos/1000575162.jpg" alt="Recuerdo 4">
+                    </div>
+                    <div class="polaroid-caption">Siempre seras mi bebe chiquita que tengo que cuidar toda la vida ❣️</div>
+                </div>
+
+                <div class="polaroid">
+                    <div class="polaroid-img">
+                        <img src="fotitos/1000526691.jpg" alt="Recuerdo 5">
+                    </div>
+                    <div class="polaroid-caption">Cada momento a tu lado es especial, hasta el despertar ❣️</div>
+                </div>
+
+                <div class="polaroid">
+                    <div class="polaroid-img">
+                        <img src="fotitos/1000526696.jpg" alt="Recuerdo 6">
+                    </div>
+                    <div class="polaroid-caption">Y haces cada día más bonito amor mio ✨</div>
+                </div>
+
+                <div class="polaroid">
+                    <div class="polaroid-img">
+                        <img src="fotitos/jugando.png" alt="Recuerdo 7">
+                    </div>
+                    <div class="polaroid-caption">Hagamos lo que hagamos siempre estamos creando mas recuerdos felices y divertidos juntitos</div>
+                </div>
+
+                <div class="polaroid">
+                    <div class="polaroid-img">
+                        <img src="fotitos/1000526685.jpg" alt="Recuerdo 8">
+                    </div>
+                    <div class="polaroid-caption">Gracias por brillar como solo tu lo haces mi Eternidad ✨❣️</div>
+                </div>
+            </div>
+
+            <button class="btn-back" onclick="goTo('screen-menu')"> Para Volver a los regalos</button>
+        </section>
+
+        <!-- ==================== PANTALLA 4: RAMO DE FLORES ==================== -->
+        <section class="screen" id="screen-flowers">
+            <div class="badge-top">🌷 PARA TI AMOR MIO 🌷</div>
+            <h2>¡Flores para mi amooor!</h2>
+            <p class="lock-subtitle">Mientras le entrego las reales mi niña linda aqui estan estas con todo mi amor</p>
+
+            <div class="bouquet-stage">
+                <!-- Ramo rosado con espiguitas verdes y envoltorio azul -->
+                <svg class="bouquet-svg" viewBox="0 0 220 240" xmlns="http://www.w3.org/2000/svg">
+          <!-- Envoltorio trasero azul suave -->
+          <polygon points="110,225 35,95 185,95" fill="#dbe4ff" stroke="#748ffc" stroke-width="3" stroke-linejoin="round"/>
+          <!-- Tallos -->
+          <line x1="110" y1="190" x2="75" y2="85" stroke="#69db7c" stroke-width="5" stroke-linecap="round"/>
+          <line x1="110" y1="190" x2="110" y2="70" stroke="#51cf66" stroke-width="5" stroke-linecap="round"/>
+          <line x1="110" y1="190" x2="145" y2="85" stroke="#69db7c" stroke-width="5" stroke-linecap="round"/>
+          <line x1="110" y1="190" x2="90" y2="105" stroke="#40c057" stroke-width="5" stroke-linecap="round"/>
+          <line x1="110" y1="190" x2="130" y2="105" stroke="#40c057" stroke-width="5" stroke-linecap="round"/>
+
+          <!-- Hojas -->
+          <ellipse cx="68" cy="115" rx="14" ry="7" transform="rotate(-35 68 115)" fill="#8ce99a"/>
+          <ellipse cx="152" cy="115" rx="14" ry="7" transform="rotate(35 152 115)" fill="#8ce99a"/>
+
+          <!-- Espiguitas verdes puntiagudas -->
+          <g fill="#8ce99a" stroke="#40c057" stroke-width="1.5" stroke-linejoin="round">
+            <path d="M80 173 Q61 157 45 132 Q67 145 80 173 Z"/>
+            <path d="M72 159 Q51 156 36 145 Q58 143 72 159 Z"/>
+            <path d="M62 145 Q58 128 61 114 Q72 131 62 145 Z"/>
+            <path d="M140 173 Q159 157 175 132 Q153 145 140 173 Z"/>
+            <path d="M148 159 Q169 156 184 145 Q162 143 148 159 Z"/>
+            <path d="M158 145 Q162 128 159 114 Q148 131 158 145 Z"/>
+            <path d="M91 166 Q80 148 81 133 Q94 145 91 166 Z"/>
+            <path d="M129 166 Q140 148 139 133 Q126 145 129 166 Z"/>
+          </g>
+
+          <!-- Flor 1 (Izquierda - Rosa suave) -->
+          <g transform="translate(72, 78)">
+            <circle cx="0" cy="-12" r="10" fill="#f783ac"/>
+            <circle cx="12" cy="0" r="10" fill="#f783ac"/>
+            <circle cx="0" cy="12" r="10" fill="#f783ac"/>
+            <circle cx="-12" cy="0" r="10" fill="#f783ac"/>
+            <circle cx="0" cy="0" r="8" fill="#ffe066"/>
+          </g>
+
+          <!-- Flor 2 (Centro arriba - Rosa claro) -->
+          <g transform="translate(110, 62)">
+            <circle cx="0" cy="-13" r="11" fill="#ff8fab"/>
+            <circle cx="13" cy="0" r="11" fill="#ff8fab"/>
+            <circle cx="0" cy="13" r="11" fill="#ff8fab"/>
+            <circle cx="-13" cy="0" r="11" fill="#ff8fab"/>
+            <circle cx="0" cy="0" r="8.5" fill="#ffd43b"/>
+          </g>
+
+          <!-- Flor 3 (Derecha - Rosa intenso) -->
+          <g transform="translate(148, 78)">
+            <circle cx="0" cy="-12" r="10" fill="#f06595"/>
+            <circle cx="12" cy="0" r="10" fill="#f06595"/>
+            <circle cx="0" cy="12" r="10" fill="#f06595"/>
+            <circle cx="-12" cy="0" r="10" fill="#f06595"/>
+            <circle cx="0" cy="0" r="8" fill="#ffe066"/>
+          </g>
+
+          <!-- Flor 4 (Centro izquierda - Rosa pálido) -->
+          <g transform="translate(88, 102)">
+            <circle cx="0" cy="-11" r="9.5" fill="#ffb3c6"/>
+            <circle cx="11" cy="0" r="9.5" fill="#ffb3c6"/>
+            <circle cx="0" cy="11" r="9.5" fill="#ffb3c6"/>
+            <circle cx="-11" cy="0" r="9.5" fill="#ffb3c6"/>
+            <circle cx="0" cy="0" r="7.5" fill="#ffffff"/>
+          </g>
+
+          <!-- Flor 5 (Centro derecha - Rosa pastel) -->
+          <g transform="translate(132, 102)">
+            <circle cx="0" cy="-11" r="9.5" fill="#f783ac"/>
+            <circle cx="11" cy="0" r="9.5" fill="#f783ac"/>
+            <circle cx="0" cy="11" r="9.5" fill="#f783ac"/>
+            <circle cx="-11" cy="0" r="9.5" fill="#f783ac"/>
+            <circle cx="0" cy="0" r="7.5" fill="#fff3bf"/>
+          </g>
+
+          <!-- Papel frontal del ramo azul pastel -->
+          <polygon points="110,225 52,125 110,145 168,125" fill="#e7f5ff" stroke="#4dabf7" stroke-width="3" stroke-linejoin="round"/>
+          <!-- Moño -->
+          <path d="M110 175 C90 160, 82 185, 110 178 C138 185, 130 160, 110 175" fill="#f06595"/>
+          <circle cx="110" cy="176" r="5" fill="#fcc419"/>
+        </svg>
+
+                <!-- Etiquetas flotantes editables -->
+                <div class="flower-notes">
+                    <span class="note-tag">❣️ TE AMOO UN CHINGAMADRAAL MI AMOOOOR</span>
+                    <span class="note-tag">🦇 Tu Mi Batman</span>
+                    <span class="note-tag">🕷️ Y yo Tu Spiderman siempre para ti</span>
+                    <span class="note-tag">✨ Por toda la Eternidad</span>
+                </div>
+            </div>
+
+            <button class="btn-back" onclick="goTo('screen-menu')">Para Volver a los regalos</button>
+        </section>
+
+        <!-- ==================== PANTALLA 5: CARTA INTERACTIVA ==================== -->
+        <section class="screen" id="screen-letter">
+            <div class="badge-top">✉️ ¡TIENES UN CORREO MUEJEJE! ✉️</div>
+            <h2>Una Cartita para Ti</h2>
+            <p class="lock-subtitle" id="envelopeHint">Toca el sobre para abrirlo 💌</p>
+
+            <div class="envelope-wrapper" onclick="toggleEnvelope()">
+                <div class="envelope-box" id="envelopeBox">
+                    <div class="envelope-flap"></div>
+                    <div class="envelope-seal">❣️</div>
+                </div>
+            </div>
+
+            <!-- EDITA AQUÍ: Personaliza la carta de cumpleaños con tus propias palabras -->
+            <div class="letter-paper" id="letterPaper">
+                <h3>Mi Nicole Hermosa, Mi Preciosa Eternidad ¡que hoy cumple añitos muejeje!</h3>
+                <p>
+                    Te entrego esta cartita hoy mi amor en este dia tan especial que es el dia del año en el que estas mas chiquitita para recordarte cuanto te amo, te adoro, me encantas, me fascinas y cuan loco me vuelves y tambien para que nunca olvides que siempre, siempre,
+                    por toda la etenidad estare para ti, cuando me necesites y cuando no tambien porque yo amo estar a tu lado y pasar mis dias amandote a ti tambien. Hoy es el dia de mi niña hermosa y solo quiero que lo pase de lo mas feliz y quisiera
+                    que me permitas hacerte feliz todos los años de mi existencia mi amor, porque cuando tu eres feliz, yo soy un chingamadral de veces mas feliz.
+                </p>
+                <p>
+                    Mi niña, en serio muchas gracias, gracias por cada risa, por cada conversación, por cada anécdota, por cada buenos dias, buenas noches, buen provecho, por cada besito, por cada abrazo, por cuidarme, aconsejarme, ayudarme, por estar en mi vida y ser parte
+                    de cada dia; porque no sabes como, con el simple hecho de estar para mi le das sentido a todo y me impulsas a ser mejor, por eso y muchas cosas mas que podria decir, muchas gracias por ser mi vida, mi amor, mi corazon, mi novia y Mi
+                    Nicole. Espero que siempre podamos compartir las felicidades, tristezas, enojos, subidas y bajadas de la vida juntos mi amor, hoy en tu cumpleaños no te deseo mas que felicidad mi niña y que sigamos cumpliendo muchos mas años lado
+                    a lado.
+                </p>
+                <p>
+                    ¡Quiero que disfrute de sus cumpleaños hoy y siempre mi amor!
+                </p>
+                <div class="letter-sign">Con todo el amor y cariño,<br>De Tu novio Steven ❣️</div>
+            </div>
+
+            <button class="btn-back" onclick="goTo('screen-menu')">Para Volver a los regalos</button>
+        </section>
+
+        <!-- ==================== PANTALLA 6: PASTEL INTERACTIVO ==================== -->
+        <section class="screen" id="screen-cake">
+            <div class="badge-top"> ¡PIDE UN DESEO MI AMOOOR! </div>
+            <h2>¡Un Pastel Para mi pastelote!</h2>
+            <p class="lock-subtitle" id="cakeHint">Cierra los ojos, pide un deseo y toca el pastel para soplar las velas mi niña</p>
+
+            <div class="cake-area" onclick="blowCandles()">
+                <svg class="cake-svg" viewBox="0 0 240 230" xmlns="http://www.w3.org/2000/svg">
+          <!-- Plato -->
+          <ellipse cx="120" cy="205" rx="95" ry="16" fill="#edf2ff" stroke="#748ffc" stroke-width="3"/>
+
+          <!-- Piso inferior del pastel (Azul pastel) -->
+          <rect x="45" y="140" width="150" height="60" rx="16" fill="#a5d8ff" stroke="#1864ab" stroke-width="3"/>
+          <!-- Glaseado inferior (Blanco crema) -->
+          <path d="M45 152 Q60 168 75 152 Q90 168 105 152 Q120 168 135 152 Q150 168 165 152 Q180 168 195 152 L195 145 Q195 140 185 140 L55 140 Q45 140 45 145 Z" fill="#ffffff"/>
+
+          <!-- Piso superior del pastel (Azul lavanda) -->
+          <rect x="68" y="92" width="104" height="50" rx="14" fill="#bac8ff" stroke="#4263eb" stroke-width="3"/>
+          <!-- Glaseado superior (Azul intenso) -->
+          <path d="M68 104 Q81 118 94 104 Q107 118 120 104 Q133 118 146 104 Q159 118 172 104 L172 97 Q172 92 162 92 L78 92 Q68 92 68 97 Z" fill="#4dabf7"/>
+
+          <!-- Chispitas decorativas -->
+          <circle cx="85" cy="126" r="3" fill="#ffd43b"/>
+          <circle cx="120" cy="128" r="3" fill="#ffffff"/>
+          <circle cx="155" cy="125" r="3" fill="#ffd43b"/>
+          <circle cx="70" cy="178" r="3.5" fill="#ffd43b"/>
+          <circle cx="105" cy="182" r="3.5" fill="#748ffc"/>
+          <circle cx="140" cy="178" r="3.5" fill="#339af0"/>
+          <circle cx="172" cy="182" r="3.5" fill="#ffffff"/>
+
+          <!-- Vela 1 (Izquierda - Azul cielo) -->
+          <rect x="88" y="58" width="10" height="34" rx="4" fill="#74c0fc" stroke="#1864ab" stroke-width="2"/>
+          <g class="flame" id="flame-1">
+            <path d="M93 34 C86 44, 87 54, 93 55 C99 54, 100 44, 93 34 Z" fill="#ff922b"/>
+            <path d="M93 41 C90 46, 90 52, 93 53 C96 52, 96 46, 93 41 Z" fill="#ffe066"/>
+          </g>
+
+          <!-- Vela 2 (Centro - Dorada) -->
+          <rect x="115" y="52" width="10" height="40" rx="4" fill="#ffd43b" stroke="#f08c00" stroke-width="2"/>
+          <g class="flame" id="flame-2">
+            <path d="M120 28 C113 38, 114 48, 120 49 C126 48, 127 38, 120 28 Z" fill="#ff922b"/>
+            <path d="M120 35 C117 40, 117 46, 120 47 C123 46, 123 40, 120 35 Z" fill="#ffe066"/>
+          </g>
+
+          <!-- Vela 3 (Derecha - Azul lavanda) -->
+          <rect x="142" y="58" width="10" height="34" rx="4" fill="#748ffc" stroke="#4263eb" stroke-width="2"/>
+          <g class="flame" id="flame-3">
+            <path d="M147 34 C140 44, 141 54, 147 55 C153 54, 154 44, 147 34 Z" fill="#ff922b"/>
+            <path d="M147 41 C144 46, 144 52, 147 53 C150 52, 150 46, 147 41 Z" fill="#ffe066"/>
+          </g>
+        </svg>
+            </div>
+
+            <div class="wish-banner" id="wishBanner">
+                <h3>🎉 ¡Que todos los deseos de mi bebe se cumplan! 🎉</h3>
+                <p style="font-size: 0.92rem;">¡Felicidades para el chamoy de mis gomitas! Te mereces todo lo mejor hoy y siempre mi princesa ❣️✨</p>
+                <button class="btn-relight" onclick="relightCandles(event)">toca aqui paraVolver a encender las velas mi bebe</button>
+            </div>
+
+            <button class="btn-back" onclick="goTo('screen-menu')">Para Volver a los regalos</button>
+        </section>
+
+    </div>
+
+    <!-- Modal de Error de PIN -->
+    <div class="modal-overlay" id="errorModal" onclick="closeModal()">
+        <div class="modal-card" onclick="event.stopPropagation()">
+            <div style="font-size: 2.8rem;">🥺weee💔</div>
+            <h3>Uy Código incorrecto Mi Amor</h3>
+            <p>Ese no es mi niña... prueba otra vez</p>
+            <button class="modal-btn" onclick="closeModal()">Intentar otra vez</button>
+        </div>
+    </div>
+
+    <script>
+        // ================= CONFIGURACIÓN PRINCIPAL =================
+        const SECRET_CODE = "2308"; // Código secreto de 4 dígitos
+        let currentPin = "";
+        let candlesBlown = false;
+
+        // Generar elementos flotantes femeninos + Spider-Man/Batman en el fondo
+        const heartsContainer = document.getElementById("floatingHearts");
+        const heartSymbols = ["❣️", "🕷️", "🦇", "✨", "🌸", "💖", "💌", "🎀", "🌷"];
+        for (let i = 0; i < 18; i++) {
+            const span = document.createElement("span");
+            span.className = "heart-bg";
+            span.textContent = heartSymbols[i % heartSymbols.length];
+            span.style.left = Math.random() * 100 + "vw";
+            span.style.animationDuration = (7 + Math.random() * 8) + "s";
+            span.style.animationDelay = (Math.random() * 6) + "s";
+            span.style.fontSize = (14 + Math.random() * 14) + "px";
+            heartsContainer.appendChild(span);
+        }
+
+        // ================= LÓGICA DEL TECLADO PIN =================
+        function updatePinDisplay() {
+            for (let i = 0; i < 4; i++) {
+                const dot = document.getElementById(`dot-${i}`);
+                if (i < currentPin.length) {
+                    dot.textContent = "•";
+                    dot.classList.add("filled");
+                } else {
+                    dot.textContent = "";
+                    dot.classList.remove("filled");
+                }
+            }
+        }
+
+        function pressKey(num) {
+            if (currentPin.length < 4) {
+                currentPin += num;
+                updatePinDisplay();
+                if (currentPin.length === 4) {
+                    setTimeout(checkPin, 220);
+                }
+            }
+        }
+
+        function clearPin() {
+            currentPin = currentPin.slice(0, -1);
+            updatePinDisplay();
+        }
+
+        function checkPin() {
+            if (currentPin === SECRET_CODE) {
+                launchConfetti();
+                goTo("screen-menu");
+            } else {
+                const display = document.getElementById("pinDisplay");
+                display.classList.add("shake");
+                setTimeout(() => {
+                    display.classList.remove("shake");
+                    document.getElementById("errorModal").classList.add("show");
+                    currentPin = "";
+                    updatePinDisplay();
+                }, 380);
+            }
+        }
+
+        function closeModal() {
+            document.getElementById("errorModal").classList.remove("show");
+        }
+
+        // Permitir escribir el código también con el teclado físico
+        document.addEventListener("keydown", (e) => {
+            if (!document.getElementById("screen-lock").classList.contains("active")) return;
+            if (e.key >= "0" && e.key <= "9") pressKey(e.key);
+            if (e.key === "Backspace") clearPin();
+            if (e.key === "Enter") checkPin();
+        });
+
+        // ================= NAVEGACIÓN ENTRE PANTALLAS =================
+        function goTo(screenId) {
+            document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
+            document.getElementById(screenId).classList.add("active");
+        }
+
+        function openGift(screenId, cardId) {
+            document.getElementById(cardId).classList.add("opened");
+            goTo(screenId);
+        }
+
+        // ================= LÓGICA DE LA CARTA =================
+        function toggleEnvelope() {
+            const box = document.getElementById("envelopeBox");
+            const paper = document.getElementById("letterPaper");
+            const hint = document.getElementById("envelopeHint");
+            const isOpen = box.classList.toggle("open");
+
+            if (isOpen) {
+                paper.classList.add("visible");
+                hint.textContent = "Lee esta cartita que hice para ti mi niña linda";
+            } else {
+                paper.classList.remove("visible");
+                hint.textContent = "Toca el sobre para abrirlo mi amor 💌";
+            }
+        }
+
+        // ================= LÓGICA DEL PASTEL Y CONFETI =================
+        function blowCandles() {
+            if (candlesBlown) return;
+            candlesBlown = true;
+
+            document.querySelectorAll(".flame").forEach(f => f.classList.add("out"));
+            document.getElementById("wishBanner").classList.add("show");
+            document.getElementById("cakeHint").textContent = "¡Eshooooo! Pediste tu deseo mi amor, ahora a esperar que se cumpla ✨❣️";
+            launchConfetti();
+        }
+
+        function relightCandles(event) {
+            event.stopPropagation();
+            candlesBlown = false;
+            document.querySelectorAll(".flame").forEach(f => f.classList.remove("out"));
+            document.getElementById("wishBanner").classList.remove("show");
+            document.getElementById("cakeHint").textContent = "Cierra los ojos, pide un deseo y toca el pastel para soplar las velas 🌬️✨";
+        }
+
+        function launchConfetti() {
+            const colors = ["#4dabf7", "#748ffc", "#ffd43b", "#339af0", "#a5d8ff", "#ffffff"];
+            for (let i = 0; i < 45; i++) {
+                const piece = document.createElement("div");
+                piece.className = "confetti-piece";
+                piece.style.left = Math.random() * 100 + "vw";
+                piece.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                piece.style.borderRadius = Math.random() > 0.5 ? "50%" : "3px";
+                piece.style.animationDuration = (2 + Math.random() * 1.8) + "s";
+                document.body.appendChild(piece);
+                setTimeout(() => piece.remove(), 3800);
+            }
+        }
+    </script>
+</body>
+
+</html>
